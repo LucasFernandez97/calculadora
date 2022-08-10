@@ -15,6 +15,7 @@ public class CalculadoraController {
 	@Autowired
 	private CalculadoraService calculadoraService;
 	
+
 	@GetMapping("/suma")
 	public double sumaSimple(
 			@RequestParam(value = "num1", defaultValue = "0") double num1,
@@ -23,6 +24,12 @@ public class CalculadoraController {
 		return calculadoraService.suma(num1, num2);
 	}
 	
+	/**
+	 * Endpoint para la suma
+	 * @param num1 parametro numero 1
+	 * @param num2 parametro numero 2
+	 * @return
+	 */
 	@GetMapping("/resta")
 	public double restaSimple(
 			@RequestParam(value = "num1", defaultValue = "0") double num1,
@@ -32,9 +39,9 @@ public class CalculadoraController {
 	}
 	
 	/**
-	 * TODO implementacion de multiplicacion
-	 * @param num1
-	 * @param num2
+	 * Endpoint para la resta
+	 * @param num1 parametro numero 1
+	 * @param num2 parametro numero 2
 	 * @return
 	 */
 	@GetMapping("/multiplicacion")

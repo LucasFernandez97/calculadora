@@ -15,6 +15,12 @@ public class CalculadoraService {
 
 	BigDecimal resultado;
 	
+	/**
+	 * Metodo que devuelve la suma de dos parametros
+	 * @param num1 parametro numero 1
+	 * @param num2 parametro numero 2
+	 * @return
+	 */
 	public double suma (double num1, double num2) {
 			
 		resultado = BigDecimal.valueOf(num1);
@@ -27,6 +33,12 @@ public class CalculadoraService {
 					
 	}
 	
+	/**
+	 * Metodo que devuelve la resta de dos parametros
+	 * @param num1 parametro numero 1
+	 * @param num2 parametro numero 2
+	 * @return
+	 */
 	public double resta (double num1, double num2) {
 			
 		resultado = BigDecimal.valueOf(num1);
