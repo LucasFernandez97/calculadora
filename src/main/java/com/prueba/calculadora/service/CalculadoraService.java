@@ -2,6 +2,8 @@ package com.prueba.calculadora.service;
 
 import java.math.BigDecimal;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import io.corp.calculator.TracerImpl;
@@ -14,6 +16,8 @@ public class CalculadoraService {
 	TracerImpl tracerImpl;
 
 	BigDecimal resultado;
+	
+	private static final Logger logger = LoggerFactory.getLogger(CalculadoraService.class);
 	
 	/**
 	 * Metodo que devuelve la suma de dos parametros
@@ -28,6 +32,8 @@ public class CalculadoraService {
 		
 		tracerImpl = new TracerImpl();
 		tracerImpl.trace(resultado);
+		
+		logger.info("Traza: " + resultado);
 		
 		return resultado.doubleValue();
 					
@@ -46,6 +52,8 @@ public class CalculadoraService {
 	
 		tracerImpl = new TracerImpl();
 		tracerImpl.trace(resultado);
+		
+		logger.info("Traza: " + resultado);
 		
 		return resultado.doubleValue();
 			
