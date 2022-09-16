@@ -1,5 +1,7 @@
 package com.prueba.calculadora.config;
 
+import io.corp.calculator.TracerAPI;
+import io.corp.calculator.TracerImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,13 +11,18 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
-public class SpringFoxConfig {                                    
+public class SpringFoxConfig {
     @Bean
-    public Docket api() { 
-        return new Docket(DocumentationType.SWAGGER_2)  
-          .select()                                  
-          .apis(RequestHandlerSelectors.any())              
-          .paths(PathSelectors.any())                          
-          .build();                                           
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build();
+    }
+
+    @Bean
+    public TracerImpl tracerApi() {
+        return new TracerImpl();
     }
 }
