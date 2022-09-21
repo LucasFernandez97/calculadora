@@ -1,13 +1,11 @@
 package com.prueba.calculadora;
 
+import com.prueba.calculadora.service.CalculadoraService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.TypeMismatchException;
-
-import com.prueba.calculadora.service.CalculadoraService;
 
 @ExtendWith(MockitoExtension.class)
 public class CalculadoraServiceTest {

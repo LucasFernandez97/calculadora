@@ -1,13 +1,12 @@
 package com.prueba.calculadora.service;
 
-import java.math.BigDecimal;
-
+import io.corp.calculator.TracerImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.corp.calculator.TracerImpl;
+import java.math.BigDecimal;
 
 @Service
 public class CalculadoraService {

@@ -1,19 +1,21 @@
 package com.prueba.calculadora.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.prueba.calculadora.service.CalculadoraService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prueba.calculadora.service.CalculadoraService;
 
 @RestController
 @RequestMapping("/api")
 public class CalculadoraController {
 
-	@Autowired
 	private CalculadoraService calculadoraService;
+
+	public CalculadoraController(CalculadoraService calculadoraService) {
+		this.calculadoraService = calculadoraService;
+	}
 
 	/**
 	 * Endpoint para la suma
@@ -44,7 +46,7 @@ public class CalculadoraController {
 	}
 
 	/**
-	 * TODO implementacion de multiplicacion
+	 * Endpoint de multiplicacion
 	 * @param num1 parametro numero 1
 	 * @param num2 parametro numero 2
 	 * @return
@@ -58,7 +60,7 @@ public class CalculadoraController {
 	}
 
 	/**
-	 * TODO implementacion de division
+	 * Endpoint de division
 	 * @param num1
 	 * @param num2
 	 * @return
